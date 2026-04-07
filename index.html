@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Match Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scrapbook-container">
+    <header class="scrapbook-header">
+      <h1>Our Digital Scrapbook</h1>
+      <p class="subtitle">A collection of our sweetest memories 💖</p>
+    </header>
+    <main>
+      <section class="scrapbook-grid" id="scrapbook-grid">
+        <!-- Memories will appear here -->
+      </section>
+      <section class="add-memory">
+        <h2>Add a New Memory</h2>
+        <form id="memory-form">
+          <input type="text" id="caption" placeholder="Memory caption..." required maxlength="60">
+          <input type="file" id="photo" accept="image/*" required>
+          <button type="submit">Add Memory</button>
+        </form>
+      </section>
+    </main>
+    <footer class="scrapbook-footer">
+      <span>Made with ❤️ for you</span>
+    </footer>
+  </div>
+  <script src="scrapbook.js"></script>
+</body>
+</html>

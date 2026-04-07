@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  color: #22223b;
+  min-height: 100vh;
+}
+
+
+.scrapbook-container {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+
+.scrapbook-header {
+  padding: 2.5rem 2rem 1rem 2rem;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  text-align: center;
+}
+
+.scrapbook-header h1 {
+  font-family: 'Pacifico', cursive, Arial, sans-serif;
+  font-size: 2.5rem;
+  color: #9d174d;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #5f4b8b;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.scrapbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.memory-card {
+  background: #fff0f6;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(157, 23, 77, 0.08);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s;
+}
+.memory-card:hover {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 4px 24px rgba(157, 23, 77, 0.13);
+}
+.memory-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 0.8rem;
+  margin-bottom: 0.7rem;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  box-shadow: 0 2px 8px rgba(157, 23, 77, 0.07);
+}
+.memory-card .caption {
+  color: #9d174d;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.add-memory {
+  background: #fbc2eb;
+  border-radius: 1rem;
+  margin: 0 2rem 2rem 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(157, 23, 77, 0.07);
+}
+.add-memory h2 {
+  color: #9d174d;
+  margin-bottom: 1rem;
+}
+#memory-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+#memory-form input[type="text"] {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #a6c1ee;
+  font-size: 1rem;
+}
+#memory-form input[type="file"] {
+  font-size: 1rem;
+}
+#memory-form button {
+  background: linear-gradient(90deg, #a6c1ee 0%, #fbc2eb 100%);
+  color: #9d174d;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#memory-form button:hover {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.scrapbook-footer {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #9d174d;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .scrapbook-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .add-memory {
+    margin: 0 1rem 1rem 1rem;
+    padding: 1rem;
+  }
+}
+
+header {
+  padding: 2rem 2rem 1rem 2rem;
+  background: #334155;
+  text-align: center;
+}
+
+.match-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #64748b;
+  object-fit: cover;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.divider {
+  margin: 0 0.5rem;
+  color: #38bdf8;
+}
+
+.match-status {
+  margin-top: 0.5rem;
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.timeline, .stats {
+  flex: 1 1 250px;
+  background: #1e293b;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #38bdf8;
+  position: relative;
+}
+
+.timeline .minute {
+  color: #38bdf8;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.stats .stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+footer {
+  background: #334155;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem;
+  }
+}
